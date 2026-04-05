@@ -17,6 +17,7 @@ class User(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    refresh_Token = models.CharField(verbose_name="refresh_Token")
 
     def set_password(self, raw_password):
         """Hash and store password"""
